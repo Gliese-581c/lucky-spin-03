@@ -8,6 +8,8 @@ builder.Services.AddMvc();
 //TODO: Register the Spin class with a Scoped< > lifetime
 builder.Services.AddTransient<TextTransform>();
 
+builder.Services.AddScoped<Spin>();
+
 var app = builder.Build();
 
 

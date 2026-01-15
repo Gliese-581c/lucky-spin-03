@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-//TODO: import the LuckySpin.Models namespace into the Controller with a "using" command
 
+//TODO: import the LuckySpin.Models namespace into the Controller with a "using" command
+using LuckySpin.Models;
 
 namespace LuckySpin.Controllers
 {
     public class SpinnerController : Controller
     {
         //TODO: DIJ Part 1: Declare a private Spin field to hold the injected Spin object
+        private Spin _spin;
         //TODO: DIJ Part 2: Update the constructor to accept a Spin object as a parameter (see TODO above well)
-        public SpinnerController()
+        public SpinnerController(Spin spin)
         {
             //TODO: DIJ Part 3: Receive an injected Spin object and store it in the private _spin field
-
+            _spin = spin;
         }
         /***
         * Controller Actions - GET and POST
