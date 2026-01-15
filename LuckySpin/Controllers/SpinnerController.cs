@@ -36,11 +36,18 @@ namespace LuckySpin.Controllers
             //NOTE: At this point, the _spin object has already been created by DIJ and contains random Numbers
             //.     We only need to use the Player's form data to create a Player object and pass it to the Spin action 
             //TODO: Use the data from the form to create a new Player object assigning the luck value from the form
+            Player player = new Player {
+
+                Luck = Luck
+
+                };
+
+
 
             //TODO: Set a breakpoint on the following line of code and run the app in Debug mode
             //TODO: Instead of returning a View, the code below should "RedirectToAction" to the Spin Action
             //      Be sure to pass the Player object to the Spin action
-            return View();
+            return RedirectToAction("Spin", player);
         }
 
         /***
