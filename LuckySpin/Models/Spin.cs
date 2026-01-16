@@ -16,12 +16,11 @@ public class Spin
 
     public Spin()
     {
-        int count = 3;
-        Numbers = new int[count];
-        for (int i = 0; i < count; i++)
+        int length = 3; //change this variable to change number of rolls
+        Numbers = new int[length];
+        for (int i = 0; i < length; i++)
         {
             Numbers[i] = random.Next(1, 10);
         }
     }
-
 }

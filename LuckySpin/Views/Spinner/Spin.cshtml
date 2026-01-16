@@ -2,7 +2,7 @@
 @inject LuckySpin.Models.TextTransform TT
 @{
 //TODO: Assign the Layout property to "LuckySpinLayout" and notice the difference with and without the Layout property
-
+    Layout = "LuckySpinLayout.cshtml";
 }
 
 <button onclick='history.go(0)'>Spin</button>
@@ -14,4 +14,3 @@
     <h2> Player wins with the Lucky @TT.numberToText(Model.Luck) </h2>
     <img src="/Images/LuckySpinCoins.jpg" alt="Coins"/>
 </span>
-

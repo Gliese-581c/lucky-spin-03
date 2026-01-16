@@ -55,14 +55,15 @@ namespace LuckySpin.Controllers
          * to include the Player's Luck value
          **/
         [HttpGet] //NOTE: this method is called by the RedirectToAction method, not a browser request
-        //TOD): Adjust the Spin action [GET] to accept a Player object as a parameter
-        public IActionResult Spin()
+        //TODO): Adjust the Spin action [GET] to accept a Player object as a parameter
+        public IActionResult Spin(Player player)
         {
             //NOTE: At this point, the _spin object has already been created by DIJ and contains random Numbers
             //TODO: Use the the player's luck info to set the _spin object's Luck property appropriately
+            _spin.Luck = player.Luck;
 
             //TODO: Set a breakpoint on the following line of code and run the app in Debug mode
-            return View(); //TODO: Pass the adjusted local _spin object to the Spin View for display
+            return View(_spin); //TODO: Pass the adjusted local _spin object to the Spin View for display
         }
     }
 }
